@@ -48,33 +48,41 @@
             <div class="col-sm-6">
                 <div class="mt-3 row">
                     <h5 class="my-auto">First Name :</h5>
-                    <input class="ml-3 name input rounded p-2" type="text" placeholder="First Name" />
+                    <input id="firstName" class="form-control ml-3 input rounded p-2" type="text" placeholder="First Name" pattern="^\D+$" minlength="3" required/>
                     <p id="errorName">Numbers in the name are not valid</p>
+                    <p id="shortName">A name must be longer than 3 letters</p>
                 </div>
                 <div class="mt-3 row ">
                     <h5 class="my-auto">Email :</h5>
-                    <input class="ml-3 input rounded p-2" type="email" placeholder="Email" />
+                    <input id="email" class="form-control ml-3 input rounded p-2" type="email" placeholder="Email" minlength="3" required/>
+                    <p id="shortEmail">An Email must be longer than 3 letters</p>
+                    <p id="notEmail">An Email must have @</p>
                 </div>
                 <div class="mt-3 row ">
                     <h5 class="my-auto">Address :</h5>
-                    <input class="ml-3 input rounded p-2" type="text" placeholder="Address" />
+                    <input id="address" class="form-control ml-3 input rounded p-2" type="text" placeholder="Address" minlength="3" required/>
+                    <p id="shortAddress">Address be longer than 3 letters</p>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="mt-3 row">
-                    <h5 class="my-auto name my-auto">Last Name :</h5>
-                    <input class="ml-3 input rounded p-2" type="text" placeholder="Last Name" />
+                    <h5 class="my-auto my-auto">Last Name :</h5>
+                    <input id="lastName" class="form-control name ml-3 input rounded p-2" type="text" placeholder="Last Name" pattern="^\D+$" minlength="3" required/>
+                    <p id="errorLastName">Numbers in the name are not valid</p>
+                    <p id="shortLastName">A name must be longer than 3 letters</p>
                 </div>
                 <div class="mt-3 row">
                     <h5 class="my-auto my-auto">Password :</h5>
-                    <input class="ml-3 input password rounded p-2" title="(4-8 characters)" type="password" minlength="4"
-                        maxlength="8" placeholder="Password" />
-                    <p id="errorPassword">Enter a correct password</p>
+                    <input id="password" class="form-control ml-3 input rounded p-2" title="(4-8 characters)" type="password" minlength="4"
+                        maxlength="8" placeholder="Password" pattern="^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]+$" minlength="3" required/>
+                    <p id="errorPassword">Password must contain letters and numbers</p>
+                    <p id="shortPassword">Password must be longer than 3 characters</p>
                 </div>
                 <div class="mt-3 row">
                     <h5 class="my-auto my-auto">Phone Number :</h5>
-                    <input class="ml-3 phone input rounded p-2" type="number" placeholder="Phone No." />
+                    <input id="phone" class="form-control ml-3 input rounded p-2" type="tel" placeholder="Phone No." pattern="^\d+$" minlength="3" required/>
                     <p id="errorPhone">Invalid phone number!!</p>
+                    <p id="shortPhone">Phone must be longer than 3 characters</p>
                 </div>
             </div>
         </div>
